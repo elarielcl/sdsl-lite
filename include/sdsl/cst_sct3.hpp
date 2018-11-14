@@ -123,12 +123,12 @@ class cst_sct3
 
         typedef typename t_csa::alphabet_category              alphabet_category;
         typedef cst_tag                                        index_category;
-    private:
+    bit_vector      m_bp;
+    bv_type         m_first_child;
+private:
         csa_type        m_csa;
         lcp_type        m_lcp;
-        bit_vector      m_bp;
         bp_support_type m_bp_support;
-        bv_type         m_first_child;
         rank_type       m_first_child_rank;
         sel_type        m_first_child_select;
         size_type       m_nodes;

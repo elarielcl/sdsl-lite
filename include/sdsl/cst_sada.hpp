@@ -105,13 +105,14 @@ class cst_sada
 
         typedef typename t_csa::alphabet_category                 alphabet_category;
         typedef cst_tag                                           index_category;
+
+    bit_vector      m_bp;  // balanced parentheses sequence for suffix tree
+    bp_support_type m_bp_support; // support for the balanced parentheses sequence
+    rank_10_type    m_bp_rank10;  // rank_support for leaves, i.e. "10" bit pattern
+    select_10_type  m_bp_select10;// select_support for leaves, i.e. "10" bit pattern
     private:
         t_csa           m_csa; // suffix array
         lcp_type        m_lcp; // lcp information
-        bit_vector      m_bp;  // balanced parentheses sequence for suffix tree
-        bp_support_type m_bp_support; // support for the balanced parentheses sequence
-        rank_10_type    m_bp_rank10;  // rank_support for leaves, i.e. "10" bit pattern
-        select_10_type  m_bp_select10;// select_support for leaves, i.e. "10" bit pattern
 
         /* Get the number of leaves that are in the subtree rooted at the first child of v +
          * number of leafs in the subtrees rooted at the children of parent(v) which precede v in the tree.

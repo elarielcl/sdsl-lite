@@ -323,11 +323,11 @@ class int_vector
     private:
 
         size_type      m_size;  //!< Number of bits needed to store int_vector.
-        uint64_t*      m_data;  //!< Pointer to the memory for the bits.
+        
         int_width_type m_width; //!< Width of the integers.
 
     public:
-
+uint64_t*      m_data;  //!< Pointer to the memory for the bits.
         //! Constructor for int_vector.
         /*! \param size          Number of elements. Default value is 0.
             \param default_value Initialize all value to `default value`.
